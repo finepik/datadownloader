@@ -1,8 +1,6 @@
-# Веб-сервис, для обработки внутренних данных компании
+# Веб-сервис, для обработки внутренних данных компании (backend часть)
 
 Разработка для компании ООО АСУ-ВЭИ 
-
-Backend часть: https://github.com/finepik/datadownloader
 
 Frontend часть: https://github.com/finepik/file-loader-frontend
 
