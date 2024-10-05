@@ -8,6 +8,7 @@ from .utils import *
 from .models import DbDownload
 from .serializers import DocumentSerializer
 import sqlite3
+import os
 
 
 # ViewSets define the view behavior.
@@ -20,7 +21,8 @@ class DocumentViewSet(ModelViewSet):
         # loading in modules
 
         # creating file path
-        dbfile = "C:\\Users\\Natalya\\Downloads\\YERMAK_T2\\YERMAK_T2.sqlite"
+        cwd = os.getcwd()
+        dbfile = cwd + "\\YERMAK_T2.sqlite"
         # Create a SQL connection to our SQLite database
         con = sqlite3.connect(dbfile)
 
