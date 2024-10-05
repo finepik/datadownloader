@@ -1,20 +1,14 @@
-import os
-import shutil
-import tempfile
-import zipfile
 from dateutil.relativedelta import relativedelta
-from django.core.files import File
-from django.db.models import FileField
-from django.shortcuts import render
 from django.utils.timezone import now
 from rest_framework.decorators import action
+from rest_framework.response import Response
 from rest_framework.utils import json
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.response import Response
 from .utils import *
 from .models import DbDownload
 from .serializers import DocumentSerializer
 import sqlite3
+
 
 # ViewSets define the view behavior.
 class DocumentViewSet(ModelViewSet):
@@ -24,7 +18,6 @@ class DocumentViewSet(ModelViewSet):
     @action(methods=['get'], detail=False)
     def get(self, request):
         # loading in modules
-
 
         # creating file path
         dbfile = "C:\\Users\\Natalya\\Downloads\\YERMAK_T2\\YERMAK_T2.sqlite"
@@ -41,8 +34,8 @@ class DocumentViewSet(ModelViewSet):
 
         # Be sure to close the connection
         con.close()
-        jsonArray = json.dumps(table_list)
-        return Response({jsonArray})
+        json_array = json.dumps(table_list)
+        return Response({json_array})
 
     @action(methods=['post'], detail=False)
     def post(self, request):
