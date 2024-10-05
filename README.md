@@ -29,7 +29,20 @@ Frontend часть: https://github.com/finepik/file-loader-frontend
 - django;
 - drf;
 - sqllite;
-- docker.
+
+### Пример работы
+
+Интерфейс для загрузки данных. Сообщение об успешной загрузке данных.
+
+![image](https://github.com/user-attachments/assets/927204cc-8535-4ccd-a1c7-3a334dc75ac4)
+
+Get запрос к серверу для просмотра всех успешных post запросов.
+
+![image](https://github.com/user-attachments/assets/52bcc0b3-9ed5-4087-b39f-ce20e43112d9)
+
+Сообщения, отправленные телеграмм ботом после успешной загрузки данных.
+![image](https://github.com/user-attachments/assets/439c1906-b970-49f1-8865-daf6e6930c6b)
+
 
 ## Установка
 
